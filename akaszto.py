@@ -22,10 +22,7 @@ def cserel(feladvany, szo, betu):
     return eredmeny 
 
 
-
-
-def main():
-    helysegek = beolvas("helyek.txt")
+def gep_gondol(helysegek):
     feladat = random.choice(helysegek)
     kiirando = feladvany(feladat)
     print(kiirando)
@@ -48,6 +45,10 @@ def main():
         print("grat")
     else:
         print("Ezt elrontottad, a gondolt szó: ", feladat)
+
+def main():
+    helysegek = beolvas("helyek.txt")
+    gep_gondol(helysegek)    
 
 main()    
             
